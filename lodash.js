@@ -3,34 +3,63 @@ var _ = {};
 /**************************************
  *************** ARRAYS ***************
  **************************************/
-
- // Returns the first element of an array.
+ /**
+ * @name - _.first
+ * @description - Returns the first element of an array.
+ * @param - array
+ * @return - first element in input array
+ **/
 _.first = function(array) {
   // Place your solution here
 };
 
- // Returns the first n number of elements in an array which will
- // create a slice of the array with n elements taken from the beginning.
+/**
+ * @name - _.take
+ * @description - Returns the first n number of elements 
+ *                in an array which will create a slice 
+ *                of the array with n elements taken from
+ *                the beginning.
+ * @param.1 - array
+ * @param.2 - number
+ * @return - element in array located at index n
+ **/
 _.take = function(array, n) {
 	// Place your solution here
 };
 
-// Returns the very last element of the array.
+/**
+ * @name - _.last
+ * @description - Returns the last element of an array.
+ * @param - array
+ * @return - last element in the input array
+ **/
 _.last = function(array) {
 	// Place your solution here
 };
 
-// Returns the last n number of elements in the array which will
-// create a slice of array with n elements taken from the end.
+/**
+ * @name - _.takeRight
+ * @description - Returns the last n number of elements
+ *                in an array which will create a slice of
+ *                array with n elements taken from the end.
+ * @param.1 - array
+ * @param.2 - number
+ * @return - array with last n elements from input array
+ **/
 _.takeRight = function(array, n) {
 	// Place your solution here
 };
 
-// Returns a new array with all falsey values removed.
-// falsy values: false, null, 0, "", undefined, and NaN.
-// Example:
-// _.compact([0, 1, false, 2, '', 3]);
-// → [1, 2, 3]
+/**
+ * @name - _.compact
+ * @description - Returns a new array with all falsy values removed.
+ *                falsy values: false, null, 0, "", undefined, and NaN.
+ *                Example:
+ *                _.compact([0, 1, false, 2, '', 3]);
+ *                → [1, 2, 3]
+ * @param - array
+ * @return - array containing only truthy values
+ **/
 _.compact = function(array) {
 	// Place your solution here
 };
@@ -62,8 +91,21 @@ _.indexOf = function(array, el) {
 	// Place your solution here
 };
 
+/**
+ * @name - _.reduce
+ * @description - Applies a callback to each element and adds the result
+ *                to an accumulator.
+ * @param.1 - array
+ * @param.2 - callback function
+ * @param.3 - (optional) initial value of accumulator
+ * @return - value stored in the accumulator
+ **/
+_.reduce = function(array, callback, accumulator) {
+	// Place your solution here
+};
+
 /*************** BONUS ***************/
-// Retuns a new array with the elements in shuffled order.
+// Returns a new array with the elements in shuffled order.
 _.shuffle = function(array) {
 	// Place your solution here
 };
