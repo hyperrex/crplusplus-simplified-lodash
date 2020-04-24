@@ -115,8 +115,44 @@ describe('#indexOf(array, el)', function() {
 
 });
 
+describe('#reduce(collection, callback, accumulator)', function() {
+
+  it('should return the sum of every element in an array', function() {
+    const reduced = _.reduce([1,2,3,4,5], function(accumulator, num) {
+      return accumulator += num;
+    });
+
+    assert.deepEqual(reduced, 15);
+  })
+
+  it('should return the sum of every element in an array plus the starting value of accumulator', function() {
+    const reduced = _.reduce([1,2,3,4,5], function(accumulator, num) {
+      return accumulator += num;
+    }, 5);
+
+    assert.deepEqual(reduced, 20);
+  })
+
+  it('should return the product of every element in an array', function() {
+    const reduced = _.reduce([1,2,3,4,5], function(accumulator, num) {
+      return accumulator *= num;
+    });
+
+    assert.deepEqual(reduced, 120);
+  })
+  
+  it('should return the product of every element in an array multiplied by the starting value of the accumulator', function() {
+    const reduced = _.reduce([1,2,3,4,5], function(accumulator, num) {
+      return accumulator *= num;
+    }, 10);
+
+    assert.deepEqual(reduced, 1200);
+  })
+
+});
+
 // /*************** BONUS ***************/
-xdescribe('#shuffle(array)', function() {
+describe('#shuffle(array)', function() {
 
   it('should return a new array with elements shuffled', function() {
     assert.equal(_.shuffle([1, 2, 3]).length, 3);
@@ -266,7 +302,7 @@ describe('#reject(collection, callback)', function() {
 });
 
 // /*************** BONUS ***************/
-xdescribe('#sample(collection, n)', function() {
+describe('#sample(collection, n)', function() {
 
   it('should return n random characters of a string', function() {
     var randomizedCollection = _.sample('pizza', 2);
@@ -288,3 +324,5 @@ xdescribe('#sample(collection, n)', function() {
   });
 
 });
+
+
