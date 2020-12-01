@@ -1,8 +1,9 @@
-var _ = {};
+const _ = {};
 
 /**************************************
  *************** ARRAYS ***************
  **************************************/
+
  /**
  * @name - _.first
  * @description - Returns the first element of an array.
@@ -64,29 +65,49 @@ _.compact = function(array) {
 	// Place your solution here
 };
 
-// Returns a new array of elements in the first argument, but
-// excludes any element found in the second argument.
-// Example:
-// _.difference([1, 2, 3], [4, 2]);
-// → [1, 3]
+/**
+ * @name - _.difference
+ * @description - Returns a new array of elements in the first argument, but
+ *                excludes any element found in the second argument.
+ *                Example:
+ *                _.difference([1, 2, 3], [4, 2]);
+ *                → [1, 3]
+ * @param.1 - array
+ * @param.2 - array
+ * @return - array containing only the elements of the first input that are not
+ *           found in the second array
+ **/
 _.difference = function(arrayOne, arrayTwo) {
 	// Place your solution here
 };
 
-// Returns element with the minimum
-// value from the array.
+/**
+ * @name - _.min
+ * @description - Returns the element with the minimum value in an array.
+ * @param - array
+ * @return - element with minimum value
+ **/
 _.min = function(array) {
 	// Place your solution here
 };
 
-// Returns element with the maximum
-// value from array.
+/**
+ * @name - _.max
+ * @description - Returns the element with the maximum value in an array.
+ * @param - array
+ * @return - element with maximum value
+ **/
 _.max = function(array) {
 	// Place your solution here
 };
 
-// Returns the index of the first matched element or
-// -1 if there is no match in the array
+/**
+ * @name - _.indexOf
+ * @description - Returns either index of matched element or -1.
+ * @param.1 - array
+ * @param.2 - element
+ * @return - number index if element is found; -1 if not found.
+ **/
 _.indexOf = function(array, el) {
 	// Place your solution here
 };
@@ -105,7 +126,12 @@ _.reduce = function(array, callback, accumulator) {
 };
 
 /*************** BONUS ***************/
-// Returns a new array with the elements in shuffled order.
+/**
+ * @name - _.shuffle
+ * @description - Retuns a new array with elements in shuffled order.
+ * @param - array
+ * @return - array containing all the original elements in a random order
+ **/
 _.shuffle = function(array) {
 	// Place your solution here
 };
@@ -113,41 +139,97 @@ _.shuffle = function(array) {
 /**************************************
 ************* COLLECTIONS *************
 **************************************/
-// Returns the length of a collection.
+/**
+ * @name - _.size
+ * @description - Returns the length of a collection.
+ * @param - array, object or string
+ * @return - number representing the iterable length of the input collection
+ **/
 _.size = function(collection) {
 	// Place your solution here
 };
 
-// Iterates on each element of a collection,
-// calls the callback on the element and
-// then returns the original collection in its
-// original state
+/**
+ * @name - _.forEach
+ * @description - Iterates on each element of a collection and then
+ *                returns the original collection.
+ * @param.1 - array, object or string
+ * @param.2 - callback function
+ * @return - no return; this function just iterates through the data
+ *           and performs the callback function on each
+ **/
 _.forEach = function(collection, callback) {
 	// Place your solution here
 };
 
-// Iterates on each element of a collection and
-// then returns a new array with the results of
-// invoking the callback function on each element.
+/**
+ * @name - _.map
+ * @description - Iterates on each element of a collection and
+ *                then returns a new array.
+ * @param.1 - array, object or string
+ * @param.2 - callback function
+ * @return - array of elements that are the result of executing the
+ *           callback function on each element in the input collection
+ **/
 _.map = function(collection, callback) {
 	// Place your solution here
 };
 
-// Returns a new collection with only the elements
-// where there result of the callback are true.
+/**
+ * @name - _.filter
+ * @description - Returns a new collection with filtered elements.
+ * @param.1 - array, object or string
+ * @param.2 - callback function
+ * @return - array of elements that returned true after executing
+ *           callback function on each element in the input collection
+ **/
 _.filter = function(collection, callback) {
 	// Place your solution here
 };
 
-// Returns a new collection with only the elements
-// that return false when the callback is invoked
+/**
+ * @name - _.reject
+ * @description - Returns a new collection with unfiltered elements.
+ * @param.1 - array, object or string
+ * @param.2 - callback function
+ * @return - array of elements that returned false after executing
+ *           callback function on each element in the input collection
+ **/
 _.reject = function(collection, callback) {
 	// Place your solution here
 };
 
+/**
+ * @name - _.every
+ * @description - Returns a new collection with unfiltered elements.
+ * @param.1 - array
+ * @param.2 - callback function
+ * @return - boolean
+ **/
+_.every = function(array, callback) {
+ // Place your solution here
+};
+
 /*************** BONUS ***************/
- // Returns n number of random elements from the collection.
+/**
+ * @name - _.sample
+ * @description - Returns n number of random elements in a collection.
+ * @param.1 - array, object or string
+ * @param.2 - number
+ * @return - array containing n random elements from the input collection
+ **/
 _.sample = function(collection, n) {
+	// Place your solution here
+};
+
+/**
+ * @name - _.objectToArray
+ * @description - Converts an object into an array of arrays. Each nested array
+ *                contains a key and value pair from the input object.
+ * @param - object
+ * @return - number representing the iterable length of the input collection
+ **/
+_.objectToArray = function(obj) {
 	// Place your solution here
 };
 
