@@ -8,8 +8,8 @@ var _ = require('../lodash');
 describe('#first(array)', function() {
 
   it('should return the first element of a non-empty array', function() {
-    assert.equal(_.first(['first', 'second']), 'first');
-    assert.equal(_.first(['monday', 'tuesday']), 'monday');
+    assert.strictEqual(_.first(['first', 'second']), 'first');
+    assert.strictEqual(_.first(['monday', 'tuesday']), 'monday');
   });
 
 });
@@ -17,13 +17,13 @@ describe('#first(array)', function() {
 describe('#take(array, n)', function() {
 
   it('should assign a default value of 1 to n', function() {
-    assert.deepEqual(_.take(['first', 'second']), ['first']);
-    assert.deepEqual(_.take(['saturday', 'sunday']), ['saturday']);
+    assert.deepStrictEqual(_.take(['first', 'second']), ['first']);
+    assert.deepStrictEqual(_.take(['saturday', 'sunday']), ['saturday']);
   });
 
   it('should return n elements from the beginning of an array', function() {
-    assert.deepEqual(_.take(['one', 'two'], 1), ['one']);
-    assert.deepEqual(_.take(['mon', 'wed', 'fri'], 2), ['mon', 'wed']);
+    assert.deepStrictEqual(_.take(['one', 'two'], 1), ['one']);
+    assert.deepStrictEqual(_.take(['mon', 'wed', 'fri'], 2), ['mon', 'wed']);
   });
 
 });
@@ -31,8 +31,8 @@ describe('#take(array, n)', function() {
 describe('#last(array)', function() {
 
   it('should return the last element of a non-empty array', function() {
-    assert.equal(_.last(['first', 'second']), 'second');
-    assert.equal(_.last(['monday', 'tuesday']), 'tuesday');
+    assert.strictEqual(_.last(['first', 'second']), 'second');
+    assert.strictEqual(_.last(['monday', 'tuesday']), 'tuesday');
   });
 
 });
@@ -40,13 +40,13 @@ describe('#last(array)', function() {
 describe('#takeRight(array, n)', function() {
 
   it('should assign a default value of 1 to n', function() {
-    assert.deepEqual(_.takeRight(['first', 'second']), ['second']);
-    assert.deepEqual(_.takeRight(['saturday', 'sunday']), ['sunday']);
+    assert.deepStrictEqual(_.takeRight(['first', 'second']), ['second']);
+    assert.deepStrictEqual(_.takeRight(['saturday', 'sunday']), ['sunday']);
   });
 
   it('should return n elements from the end of an array', function() {
-    assert.deepEqual(_.takeRight(['one', 'two'], 1), ['two']);
-    assert.deepEqual(_.takeRight(['mon', 'wed', 'fri'], 2), ['wed', 'fri']);
+    assert.deepStrictEqual(_.takeRight(['one', 'two'], 1), ['two']);
+    assert.deepStrictEqual(_.takeRight(['mon', 'wed', 'fri'], 2), ['wed', 'fri']);
   });
 
 });
@@ -54,23 +54,23 @@ describe('#takeRight(array, n)', function() {
 describe('#compact(array)', function() {
 
   it('should return a new array without 0.', function() {
-    assert.deepEqual(_.compact(['one',0,'two']), ['one', 'two'] );
+    assert.deepStrictEqual(_.compact(['one',0,'two']), ['one', 'two'] );
   });
 
   it('should return a new array without undefined.', function() {
-    assert.deepEqual(_.compact(['one',undefined,'two']), ['one', 'two'] );
+    assert.deepStrictEqual(_.compact(['one',undefined,'two']), ['one', 'two'] );
   });
 
   it('should return a new array without empty string.', function() {
-    assert.deepEqual(_.compact(['one','two','']), ['one', 'two'] );
+    assert.deepStrictEqual(_.compact(['one','two','']), ['one', 'two'] );
   });
 
   it('should return a new array without null.', function() {
-    assert.deepEqual(_.compact(['one','two',null]), ['one', 'two'] );
+    assert.deepStrictEqual(_.compact(['one','two',null]), ['one', 'two'] );
   });
 
   it('should return a new array without NaN.', function() {
-    assert.deepEqual(_.compact([NaN,'one','two']), ['one', 'two'] );
+    assert.deepStrictEqual(_.compact([NaN,'one','two']), ['one', 'two'] );
   });
 
 });
@@ -78,7 +78,7 @@ describe('#compact(array)', function() {
 describe('#difference(array1, array2)', function() {
 
   it('should return a new array with elements in the first but not second argument', function() {
-    assert.deepEqual(_.difference([1, 2, 3], [4, 2]), [1,3]);
+    assert.deepStrictEqual(_.difference([1, 2, 3], [4, 2]), [1,3]);
   });
 
 });
@@ -86,8 +86,8 @@ describe('#difference(array1, array2)', function() {
 describe('#min(array)', function() {
 
   it('should return the element with the minimum value', function() {
-    assert.equal(_.min([1,2,3,4,5]), 1);
-    assert.equal(_.min([100,200,300,400]), 100);
+    assert.strictEqual(_.min([1,2,3,4,5]), 1);
+    assert.strictEqual(_.min([100,200,300,400]), 100);
   });
 
 });
@@ -95,8 +95,8 @@ describe('#min(array)', function() {
 describe('#max(array)', function() {
 
   it('should return the element with the maximum value', function() {
-    assert.equal(_.max([1,2,3,4,5]), 5);
-    assert.equal(_.max([1,7,3,4,5,0]), 7);
+    assert.strictEqual(_.max([1,2,3,4,5]), 5);
+    assert.strictEqual(_.max([1,7,3,4,5,0]), 7);
   });
 
 });
@@ -104,13 +104,13 @@ describe('#max(array)', function() {
 describe('#indexOf(array, el)', function() {
 
   it('should return an index of the first element in the array that matches el', function() {
-    assert.equal(_.indexOf(["one", "two", "three"], "two"), 1);
-    assert.equal(_.indexOf([101, 202, 303], 303), 2);
+    assert.strictEqual(_.indexOf(["one", "two", "three"], "two"), 1);
+    assert.strictEqual(_.indexOf([101, 202, 303], 303), 2);
   });
 
   it('should return an index of -1 if no elements in the array matches el', function() {
-    assert.equal(_.indexOf(["one", "two", "three"], "five"), -1);
-    assert.equal(_.indexOf([101, 202, 303], 909), -1);
+    assert.strictEqual(_.indexOf(["one", "two", "three"], "five"), -1);
+    assert.strictEqual(_.indexOf([101, 202, 303], 909), -1);
   });
 
 });
@@ -122,7 +122,7 @@ describe('#reduce(collection, callback, accumulator)', function() {
       return accumulator += num;
     });
 
-    assert.deepEqual(reduced, 15);
+    assert.deepStrictEqual(reduced, 15);
   })
 
   it('should return the sum of every element in an array plus the starting value of accumulator', function() {
@@ -130,7 +130,7 @@ describe('#reduce(collection, callback, accumulator)', function() {
       return accumulator += num;
     }, 5);
 
-    assert.deepEqual(reduced, 20);
+    assert.deepStrictEqual(reduced, 20);
   })
 
   it('should return the product of every element in an array', function() {
@@ -138,7 +138,7 @@ describe('#reduce(collection, callback, accumulator)', function() {
       return accumulator *= num;
     });
 
-    assert.deepEqual(reduced, 120);
+    assert.deepStrictEqual(reduced, 120);
   })
   
   it('should return the product of every element in an array multiplied by the starting value of the accumulator', function() {
@@ -146,7 +146,7 @@ describe('#reduce(collection, callback, accumulator)', function() {
       return accumulator *= num;
     }, 10);
 
-    assert.deepEqual(reduced, 1200);
+    assert.deepStrictEqual(reduced, 1200);
   })
 
 });
@@ -155,7 +155,7 @@ describe('#reduce(collection, callback, accumulator)', function() {
 describe('#shuffle(array)', function() {
 
   it('should return a new array with elements shuffled', function() {
-    assert.equal(_.shuffle([1, 2, 3]).length, 3);
+    assert.strictEqual(_.shuffle([1, 2, 3]).length, 3);
   });
 
 });
@@ -166,18 +166,18 @@ describe('#shuffle(array)', function() {
 describe('#size(collection)', function() {
 
   it('should return the size of a string', function() {
-    assert.equal(_.size('pizza'), 5);
-    assert.equal(_.size('cookie'), 6);
+    assert.strictEqual(_.size('pizza'), 5);
+    assert.strictEqual(_.size('cookie'), 6);
   });
 
   it('should return the size of an array', function() {
-    assert.equal(_.size([1, 2, 3, 4]), 4);
-    assert.equal(_.size(['mon', 'wed', 'fri']), 3);
+    assert.strictEqual(_.size([1, 2, 3, 4]), 4);
+    assert.strictEqual(_.size(['mon', 'wed', 'fri']), 3);
   });
 
   it('should return the size of an object', function() {
-    assert.equal(_.size({a: 1, b: 2, c: 100}), 3);
-    assert.equal(_.size({a: 'one', b: 'two', c: 'three'}), 3);
+    assert.strictEqual(_.size({a: 1, b: 2, c: 100}), 3);
+    assert.strictEqual(_.size({a: 'one', b: 'two', c: 'three'}), 3);
   });
 
 });
@@ -191,7 +191,7 @@ describe('#forEach(collection, callback)', function() {
       iterated += val;
     });
 
-    assert.deepEqual(iterated, 'pizza');
+    assert.deepStrictEqual(iterated, 'pizza');
   });
 
   it('should iterate on each element of an array', function() {
@@ -201,7 +201,7 @@ describe('#forEach(collection, callback)', function() {
       iterated.push(val);
     });
 
-    assert.deepEqual(iterated, [1,2,3,4]);
+    assert.deepStrictEqual(iterated, [1,2,3,4]);
   });
 
   it('should iterate on each element of an object', function() {
@@ -211,7 +211,7 @@ describe('#forEach(collection, callback)', function() {
       iterated.push(val);
     });
 
-    assert.deepEqual(iterated, [1, 2, 3]);
+    assert.deepStrictEqual(iterated, [1, 2, 3]);
   });
 
 });
@@ -223,7 +223,7 @@ describe('#map(collection, callback)', function() {
       return val;
     });
 
-    assert.deepEqual(mapped, ['p', 'i', 'z', 'z', 'a']);
+    assert.deepStrictEqual(mapped, ['p', 'i', 'z', 'z', 'a']);
   });
 
   it('should iterate on each element of an array', function() {
@@ -231,7 +231,7 @@ describe('#map(collection, callback)', function() {
       return val * val;
     });
 
-    assert.deepEqual(mapped, [1, 4, 9, 16]);
+    assert.deepStrictEqual(mapped, [1, 4, 9, 16]);
   });
 
   it('should iterate on each element of an object', function() {
@@ -239,7 +239,7 @@ describe('#map(collection, callback)', function() {
       return val * val;
     });
 
-    assert.deepEqual(mapped, [1, 4, 9]);
+    assert.deepStrictEqual(mapped, [1, 4, 9]);
   });
 
 });
@@ -251,7 +251,7 @@ describe('#filter(collection, callback)', function() {
       return val === 'z';
     });
 
-    assert.deepEqual(filteredArray, ['z', 'z']);
+    assert.deepStrictEqual(filteredArray, ['z', 'z']);
   });
 
   it('should iterate on each element of an array', function() {
@@ -259,7 +259,7 @@ describe('#filter(collection, callback)', function() {
       return (val % 2) === 0;
     });
 
-    assert.deepEqual(filteredArray, [2, 4]);
+    assert.deepStrictEqual(filteredArray, [2, 4]);
   });
 
   it('should iterate on each element of an object', function() {
@@ -267,7 +267,7 @@ describe('#filter(collection, callback)', function() {
       return (val % 2) === 1;
     });
 
-    assert.deepEqual(filteredArray, [1, 3]);
+    assert.deepStrictEqual(filteredArray, [1, 3]);
   });
 
 });
@@ -279,7 +279,7 @@ describe('#reject(collection, callback)', function() {
       return val === 'z';
     });
 
-    assert.deepEqual(rejectedCollection, ['p', 'i', 'a']);
+    assert.deepStrictEqual(rejectedCollection, ['p', 'i', 'a']);
   });
 
   it('should iterate on each element of an array', function() {
@@ -287,7 +287,7 @@ describe('#reject(collection, callback)', function() {
       return (val % 2) === 0;
     });
 
-    assert.deepEqual(rejectedCollection, [1, 3]);
+    assert.deepStrictEqual(rejectedCollection, [1, 3]);
   });
 
 
@@ -296,7 +296,7 @@ describe('#reject(collection, callback)', function() {
       return (val % 2) === 1;
     });
 
-    assert.deepEqual(rejectedCollection, [2]);
+    assert.deepStrictEqual(rejectedCollection, [2]);
   });
 
 });
@@ -307,20 +307,20 @@ describe('#sample(collection, n)', function() {
   it('should return n random characters of a string', function() {
     var randomizedCollection = _.sample('pizza', 2);
 
-    assert.deepEqual(randomizedCollection.length, 2);
+    assert.deepStrictEqual(randomizedCollection.length, 2);
   });
 
   it('should return n random elements of an array', function() {
     var randomizedCollection = _.sample([1,2,3,4], 3);
 
-    assert.deepEqual(randomizedCollection.length, 3);
+    assert.deepStrictEqual(randomizedCollection.length, 3);
   });
 
 
   it('should return n random elements of an object', function() {
     var randomizedCollection = _.sample({a: 1, b: 2, c: 3}, 2);
 
-    assert.deepEqual(randomizedCollection.length, 2);
+    assert.deepStrictEqual(randomizedCollection.length, 2);
   });
 
 });
