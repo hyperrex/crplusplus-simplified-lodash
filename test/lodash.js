@@ -14,7 +14,7 @@ describe('#first(array)', function () {
 
 });
 
-describe('#take(array, n)', function () {
+xdescribe('#take(array, n)', function () {
 
   it('should assign a default value of 1 to n', function () {
     assert.deepStrictEqual(_.take(['first', 'second']), ['first']);
@@ -28,7 +28,7 @@ describe('#take(array, n)', function () {
 
 });
 
-describe('#last(array)', function () {
+xdescribe('#last(array)', function () {
 
   it('should return the last element of a non-empty array', function () {
     assert.strictEqual(_.last(['first', 'second']), 'second');
@@ -37,7 +37,7 @@ describe('#last(array)', function () {
 
 });
 
-describe('#takeRight(array, n)', function () {
+xdescribe('#takeRight(array, n)', function () {
 
   it('should assign a default value of 1 to n', function () {
     assert.deepStrictEqual(_.takeRight(['first', 'second']), ['second']);
@@ -51,7 +51,7 @@ describe('#takeRight(array, n)', function () {
 
 });
 
-describe('#compact(array)', function () {
+xdescribe('#compact(array)', function () {
 
   it('should return a new array without 0.', function () {
     assert.deepStrictEqual(_.compact(['one', 0, 'two']), ['one', 'two']);
@@ -75,7 +75,7 @@ describe('#compact(array)', function () {
 
 });
 
-describe('#difference(array1, array2)', function () {
+xdescribe('#difference(array1, array2)', function () {
 
   it('should return a new array with elements in the first but not second argument', function () {
     assert.deepStrictEqual(_.difference([1, 2, 3], [4, 2]), [1, 3]);
@@ -83,7 +83,7 @@ describe('#difference(array1, array2)', function () {
 
 });
 
-describe('#min(array)', function () {
+xdescribe('#min(array)', function () {
 
   it('should return the element with the minimum value', function () {
     assert.strictEqual(_.min([1, 2, 3, 4, 5]), 1);
@@ -92,7 +92,7 @@ describe('#min(array)', function () {
 
 });
 
-describe('#max(array)', function () {
+xdescribe('#max(array)', function () {
 
   it('should return the element with the maximum value', function () {
     assert.strictEqual(_.max([1, 2, 3, 4, 5]), 5);
@@ -101,7 +101,7 @@ describe('#max(array)', function () {
 
 });
 
-describe('#indexOf(array, el)', function () {
+xdescribe('#indexOf(array, el)', function () {
 
   it('should return an index of the first element in the array that matches el', function () {
     assert.strictEqual(_.indexOf(["one", "two", "three"], "two"), 1);
@@ -115,7 +115,7 @@ describe('#indexOf(array, el)', function () {
 
 });
 
-describe('#reduce(collection, callback, accumulator)', function () {
+xdescribe('#reduce(collection, callback, accumulator)', function () {
 
   it('should return the sum of every element in an array', function () {
     const reduced = _.reduce([1, 2, 3, 4, 5], function (accumulator, num) {
@@ -151,7 +151,7 @@ describe('#reduce(collection, callback, accumulator)', function () {
 
 });
 
-describe('#every(array, callback)', function () {
+xdescribe('#every(array, callback)', function () {
 
   it('should return a boolean', function () {
     const boolTest = _.every([1, 2, 3], function (el) {
@@ -187,7 +187,7 @@ describe('#every(array, callback)', function () {
 });
 
 // /*************** BONUS ***************/
-describe('#shuffle(array)', function () {
+xdescribe('#shuffle(array)', function () {
 
   it('should return a new array with elements shuffled', function () {
     assert.strictEqual(_.shuffle([1, 2, 3]).length, 3);
@@ -198,7 +198,7 @@ describe('#shuffle(array)', function () {
 // /**************************************
 // ************* COLLECTIONS *************
 // **************************************/
-describe('#size(collection)', function () {
+xdescribe('#size(collection)', function () {
 
   it('should return the size of a string', function () {
     assert.strictEqual(_.size('pizza'), 5);
@@ -217,7 +217,7 @@ describe('#size(collection)', function () {
 
 });
 
-describe('#forEach(collection, callback)', function () {
+xdescribe('#forEach(collection, callback)', function () {
 
   it('should iterate on each character of a string', function () {
     var iterated = '';
@@ -251,7 +251,7 @@ describe('#forEach(collection, callback)', function () {
 
 });
 
-describe('#map(collection, callback)', function () {
+xdescribe('#map(collection, callback)', function () {
 
   it('should iterate on each character of a string', function () {
     var mapped = _.map('pizza', function (val, i, string) {
@@ -279,7 +279,7 @@ describe('#map(collection, callback)', function () {
 
 });
 
-describe('#filter(collection, callback)', function () {
+xdescribe('#filter(collection, callback)', function () {
 
   it('should iterate on each character of a string', function () {
     var filteredArray = _.filter('pizza', function (val, i, array) {
@@ -307,7 +307,7 @@ describe('#filter(collection, callback)', function () {
 
 });
 
-describe('#reject(collection, callback)', function () {
+xdescribe('#reject(collection, callback)', function () {
 
   it('should iterate on each character of a string', function () {
     var rejectedCollection = _.reject('pizza', function (val, i, array) {
@@ -337,7 +337,7 @@ describe('#reject(collection, callback)', function () {
 });
 
 // /*************** BONUS ***************/
-describe('#objectToArray(object)', function () {
+xdescribe('#objectToArray(object)', function () {
 
   it('should return an array', function () {
     const convertedObject = _.objectToArray({ a: 1, b: 2, c: 3 });
@@ -353,7 +353,7 @@ describe('#objectToArray(object)', function () {
 
 });
 
-describe('#sample(collection, n)', function () {
+xdescribe('#sample(collection, n)', function () {
 
   it('should return n random characters of a string', function () {
     var randomizedCollection = _.sample('pizza', 2);
